@@ -59,9 +59,11 @@ public class AddGroceryFragment extends Fragment {
         List<String> importantItems = ListGrocery.getInstance().getImportantItems();
         String importantText = TextUtils.join(", ", importantItems);
 
-
         BottomFragment bottomFragment = (BottomFragment) getParentFragmentManager().findFragmentById(R.id.textImportant);
-        bottomFragment.updateImportant(importantText);
+        if (bottomFragment != null) {
+            bottomFragment.updateImportant(importantText);
+        }
     }
+
 }
 
