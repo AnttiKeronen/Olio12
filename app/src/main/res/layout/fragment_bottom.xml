@@ -12,7 +12,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent" >
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/textImportant"
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:layout_marginBottom="0dp"

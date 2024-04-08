@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- tab.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TabPagerAdapter">
+    android:layout_height="match_parent">
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tabArea">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment A" />
+            android:text="Main" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment B" />
+            android:text="Add" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment C" />
+            android:text="List" />
     </com.google.android.material.tabs.TabLayout>
 
+
     <androidx.viewpager2.widget.ViewPager2
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/fragmentArea"
-        android:layout_below="@+id/tabArea">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tabArea"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-    </androidx.viewpager2.widget.ViewPager2>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

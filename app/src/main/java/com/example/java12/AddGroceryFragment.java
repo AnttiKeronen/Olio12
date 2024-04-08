@@ -60,7 +60,7 @@ public class AddGroceryFragment extends Fragment {
         String importantText = TextUtils.join(", ", importantItems);
 
 
-        BottomFragment bottomFragment = (BottomFragment) getParentFragmentManager().findFragmentById(R.id.tabLayout);
+        BottomFragment bottomFragment = (BottomFragment) getParentFragmentManager().findFragmentById(R.id.textImportant);
         bottomFragment.updateImportant(importantText);
     }
 }
